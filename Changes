@@ -1,5 +1,17 @@
 Revision history for Apache2::Pod
 
+0.25    Thu Jan 30 12:52:00 PST 2009
+        [Non-Maintainer Upload] 
+        * CPAN:MARKLE is (temporarily? permanently?)
+          granted co-maintainer status by PAUSE admin
+          brian d foy.
+
+        [FIXES]
+        * removed calls to send_http_headers which require
+          use of Apache2::compat, which is undocumented.
+          Fixes RT 31102, 39419.  Thanks Phillip Cole.
+
+
 0.24    Thu Jan  4 14:22:09 PST 2007
 		[FEATURES]
 		* added /f/keyword feature so functions can be looked up.

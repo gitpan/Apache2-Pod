@@ -13,7 +13,7 @@ Version 0.24
 use vars qw( $VERSION );
 use strict;
 
-$VERSION = '0.24';
+$VERSION = '0.25';
 
 =head1 SYNOPSIS
 

@@ -13,7 +13,7 @@ Version 0.24
 use strict;
 use vars qw( $VERSION );
 
-$VERSION = '0.24';
+$VERSION = '0.25';
 
 =head1 SYNOPSIS
 
@@ -60,7 +60,6 @@ sub handler {
 		$parser->parse_string_document( $document );
 	}
 	$r->content_type('text/plain');
-	$r->send_http_header;
 	$r->print( $str );
 	
 	return Apache2::Const::OK;

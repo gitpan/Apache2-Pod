@@ -9,7 +9,7 @@ Apache2::Pod::HTML - base class for converting Pod files to prettier forms
 use strict;
 use vars qw( $VERSION );
 
-$VERSION = '0.24';
+$VERSION = '0.25';
 
 =head1 VERSION
 
@@ -117,7 +117,6 @@ sub handler {
 
 	if ( $r->path_info eq '/auto.css' ) {
 		$r->content_type( 'text/css' );
-		$r->send_http_header;
 		$r->print( _css() );
 		return Apache2::Const::OK;
 	}
@@ -170,7 +169,6 @@ sub handler {
 		};
 	}
 	$r->content_type('text/html');
-	$r->send_http_header;
 	$r->print( $body );
 	
 	return Apache2::Const::OK;
