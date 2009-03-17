@@ -1,5 +1,13 @@
 Revision history for Apache2::Pod
 
+0.26    Tue Mar 17 11:11:11 PST 2009
+        [Non-Maintainer Upload]
+        * CPAN:MARKLE
+
+        [FIXES]
+        * requires URI::Escape; omits require of non-existent module 
+          in tests.
+
 0.25    Thu Jan 30 12:52:00 PST 2009
         [Non-Maintainer Upload] 
         * CPAN:MARKLE is (temporarily? permanently?)

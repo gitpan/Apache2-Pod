@@ -17,6 +17,7 @@ use ExtUtils::MakeMaker;
         'Pod::Simple::HTML' => 0,
         'Pod::Simple::Text' => 0,
         'Test::More'        => 0,
+        'URI::Escape'       => 0,
     },
     dist => {
         COMPRESS => 'gzip -9f',

@@ -9,11 +9,11 @@ Apache2::Pod::HTML - base class for converting Pod files to prettier forms
 use strict;
 use vars qw( $VERSION );
 
-$VERSION = '0.25';
+$VERSION = '0.26';
 
 =head1 VERSION
 
-Version 0.24
+Version 0.26
 
 =cut
 
