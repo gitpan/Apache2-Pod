@@ -1,5 +1,14 @@
 Revision history for Apache2::Pod
 
+0.27    Tue Mar 17 11:11:11 PST 2009
+        [Non-Maintainer Upload]
+        * CPAN:MARKLE
+
+        [FIXES]
+        * My::Pod::Simple::HTML was already indexed by PETDANCE
+          which is why the tests were failing.  Does anyone know
+          why this is needed?
+
 0.26    Tue Mar 17 11:11:11 PST 2009
         [Non-Maintainer Upload]
         * CPAN:MARKLE

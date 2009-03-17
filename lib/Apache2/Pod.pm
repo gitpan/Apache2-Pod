@@ -6,14 +6,14 @@ Apache2::Pod - base class for converting Pod files to prettier forms
 
 =head1 VERSION
 
-Version 0.26
+Version 0.27
 
 =cut
 
 use vars qw( $VERSION );
 use strict;
 
-$VERSION = '0.26';
+$VERSION = '0.27';
 
 =head1 SYNOPSIS
 

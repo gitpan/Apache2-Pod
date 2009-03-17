@@ -9,17 +9,17 @@ Apache2::Pod::HTML - base class for converting Pod files to prettier forms
 use strict;
 use vars qw( $VERSION );
 
-$VERSION = '0.26';
+$VERSION = '0.27';
 
 =head1 VERSION
 
-Version 0.26
+Version 0.27
 
 =cut
 
 use Apache2::Pod;
 use Apache2::Const -compile => qw( OK NOT_FOUND SERVER_ERROR );
-use URI::Escape;
+use Apache2::Pod::PodSimpleHTML;
 
 =head1 SYNOPSIS
 
@@ -124,7 +124,7 @@ sub handler {
 	my $body;
 	my $file = Apache2::Pod::getpodfile( $r );
 	my $fun = undef;
-	my $parser = Pod::Simple::HTML->new;
+	my $parser = Apache2::Pod::PodSimpleHTML->new;
 	$parser->no_errata_section(1);
 	$parser->complain_stderr(1);
 	$parser->output_string( \$body );
@@ -234,24 +234,6 @@ HR {
     display: none;
 }
 EOF
-}
-
-package My::Pod::Simple::HTML;
-
-use Pod::Simple::HTML;
-
-our @ISA = qw( Pod::Simple::HTML );
-
-*VERSION = *Pod::Simple::HTML::VERSION;
-
-sub resolve_pod_page_link {
-    my $self = shift;
-    my $to = shift;
-    my $section = shift;
-
-    my $link = $to;
-
-    return uri_escape( $link );
 }
 
 =head1 SEE ALSO
